@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://n6udya4gynkm"]
+
+[ext_resource type="Script" uid="uid://d0k2ueml8g2ku" path="res://scenes/character_body_3d.gd" id="1_p0vlq"]
+[ext_resource type="Script" uid="uid://b4qb4dcglkyh0" path="res://state/player/state_machine.gd" id="2_v6fml"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_olpmc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xdvfk"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_p0vlq")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_xdvfk")
+
+[node name="CameraHolder" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraHolder"]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 20.5923, 17.7328, 23.6388)
+projection = 1
+size = 15.0
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_v6fml")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+
+[node name="Jump" type="Node" parent="StateMachine"]
+
+[node name="Node3" type="Node" parent="StateMachine"]
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.0549444, 0)
+target_position = Vector3(6, 0, 0)
+collide_with_areas = true
+debug_shape_custom_color = Color(0, 0.569412, 0.187001, 1)
