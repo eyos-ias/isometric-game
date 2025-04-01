@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://n6udya4gynkm"]
+[gd_scene load_steps=7 format=3 uid="uid://n6udya4gynkm"]
 
 [ext_resource type="Script" uid="uid://d0k2ueml8g2ku" path="res://scenes/character_body_3d.gd" id="1_p0vlq"]
 [ext_resource type="Script" uid="uid://b4qb4dcglkyh0" path="res://state/player/state_machine.gd" id="2_v6fml"]
+[ext_resource type="Texture2D" uid="uid://lkltm77cuby5" path="res://assets/images/crosshair.png" id="3_3li8b"]
+[ext_resource type="Script" uid="uid://dyycws1os0680" path="res://state/player/idle_state.gd" id="3_mdl7e"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_olpmc"]
 
@@ -20,7 +22,7 @@ shape = SubResource("CapsuleShape3D_xdvfk")
 [node name="CameraHolder" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="CameraHolder"]
-transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 20.5923, 17.7328, 23.6388)
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 23.527, 18.013, 23.299)
 projection = 1
 size = 15.0
 
@@ -28,6 +30,7 @@ size = 15.0
 script = ExtResource("2_v6fml")
 
 [node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_mdl7e")
 
 [node name="Jump" type="Node" parent="StateMachine"]
 
@@ -38,3 +41,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.0549444, 0)
 target_position = Vector3(6, 0, 0)
 collide_with_areas = true
 debug_shape_custom_color = Color(0, 0.569412, 0.187001, 1)
+
+[node name="Sprite3D" type="Sprite3D" parent="RayCast3D"]
+transform = Transform3D(-4.5897e-09, 4.5897e-09, -0.105, 0.105, 2.00622e-16, -4.5897e-09, 0, -0.105, -4.5897e-09, 3.39043, 0, 0)
+texture = ExtResource("3_3li8b")

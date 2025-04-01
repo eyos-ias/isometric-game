@@ -67,5 +67,8 @@ material_override = SubResource("StandardMaterial3D_7ft05")
 use_collision = true
 mesh = SubResource("BoxMesh_7ft05")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("4_xdvfk")]
+[node name="CharacterBody3D" parent="." node_paths=PackedStringArray("world") instance=ExtResource("4_xdvfk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02022, 0)
+SPEED = 8.0
+JUMP_VELOCITY = 7.0
+world = NodePath("..")
