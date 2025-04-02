@@ -1,16 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://n6udya4gynkm"]
+[gd_scene load_steps=14 format=3 uid="uid://n6udya4gynkm"]
 
-[ext_resource type="Script" uid="uid://d0k2ueml8g2ku" path="res://scenes/character_body_3d.gd" id="1_p0vlq"]
+[ext_resource type="Script" uid="uid://d0k2ueml8g2ku" path="res://scenes/player.gd" id="1_p0vlq"]
 [ext_resource type="Script" uid="uid://b4qb4dcglkyh0" path="res://state/player/state_machine.gd" id="2_v6fml"]
 [ext_resource type="Texture2D" uid="uid://lkltm77cuby5" path="res://assets/images/crosshair.png" id="3_3li8b"]
 [ext_resource type="Script" uid="uid://dyycws1os0680" path="res://state/player/idle_state.gd" id="3_mdl7e"]
+[ext_resource type="Script" uid="uid://c6p4lx1djcde8" path="res://state/player/jump_state.gd" id="4_khinc"]
+[ext_resource type="Script" uid="uid://dmwhnimiyapgp" path="res://state/player/fall_state.gd" id="5_bruh7"]
+[ext_resource type="Script" uid="uid://c0ywtf4s2m826" path="res://state/player/run_state.gd" id="6_6eyey"]
+[ext_resource type="Script" uid="uid://b2u6rgpmux7ju" path="res://state/player/shoot_state.gd" id="7_d3wef"]
+[ext_resource type="PackedScene" uid="uid://2h4f5amr3re0" path="res://scenes/bullet.tscn" id="9_bruh7"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_olpmc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xdvfk"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bruh7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_6eyey"]
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_p0vlq")
+bullet_scene = ExtResource("9_bruh7")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -33,15 +43,30 @@ script = ExtResource("2_v6fml")
 script = ExtResource("3_mdl7e")
 
 [node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("4_khinc")
 
-[node name="Node3" type="Node" parent="StateMachine"]
+[node name="Fall" type="Node" parent="StateMachine"]
+script = ExtResource("5_bruh7")
+
+[node name="Run" type="Node" parent="StateMachine"]
+script = ExtResource("6_6eyey")
+
+[node name="Shoot" type="Node" parent="StateMachine"]
+script = ExtResource("7_d3wef")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.0549444, 0)
+transform = Transform3D(-1.86754, 0, 2.34782, 0, 3, 0, -2.34782, 0, -1.86754, 0, 0.0549444, 0)
 target_position = Vector3(6, 0, 0)
 collide_with_areas = true
 debug_shape_custom_color = Color(0, 0.569412, 0.187001, 1)
 
-[node name="Sprite3D" type="Sprite3D" parent="RayCast3D"]
+[node name="aim_sphere" type="MeshInstance3D" parent="RayCast3D"]
+transform = Transform3D(-4.5897e-09, 3.72529e-09, -0.105, 0.105, 2.00622e-16, -4.5897e-09, 2.22045e-16, -0.105, -3.72529e-09, 3.39043, 0, -1.19209e-07)
+material_override = SubResource("StandardMaterial3D_bruh7")
+mesh = SubResource("SphereMesh_6eyey")
+skeleton = NodePath("../crosshair")
+
+[node name="crosshair" type="Sprite3D" parent="RayCast3D"]
 transform = Transform3D(-4.5897e-09, 4.5897e-09, -0.105, 0.105, 2.00622e-16, -4.5897e-09, 0, -0.105, -4.5897e-09, 3.39043, 0, 0)
+visible = false
 texture = ExtResource("3_3li8b")
