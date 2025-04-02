@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://n6udya4gynkm"]
+[gd_scene load_steps=15 format=3 uid="uid://n6udya4gynkm"]
 
 [ext_resource type="Script" uid="uid://d0k2ueml8g2ku" path="res://scenes/player.gd" id="1_p0vlq"]
 [ext_resource type="Script" uid="uid://b4qb4dcglkyh0" path="res://state/player/state_machine.gd" id="2_v6fml"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://c0ywtf4s2m826" path="res://state/player/run_state.gd" id="6_6eyey"]
 [ext_resource type="Script" uid="uid://b2u6rgpmux7ju" path="res://state/player/shoot_state.gd" id="7_d3wef"]
 [ext_resource type="PackedScene" uid="uid://2h4f5amr3re0" path="res://scenes/bullet.tscn" id="9_bruh7"]
+[ext_resource type="AudioStream" uid="uid://bol34xb8iphhs" path="res://assets/audio/light_blast_5.wav" id="10_6eyey"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_olpmc"]
 
@@ -70,3 +71,6 @@ skeleton = NodePath("../crosshair")
 transform = Transform3D(-4.5897e-09, 4.5897e-09, -0.105, 0.105, 2.00622e-16, -4.5897e-09, 0, -0.105, -4.5897e-09, 3.39043, 0, 0)
 visible = false
 texture = ExtResource("3_3li8b")
+
+[node name="LaserSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("10_6eyey")

@@ -13,7 +13,13 @@ extends CharacterBody3D
 @onready var aim_sphere: MeshInstance3D = $RayCast3D/aim_sphere
 
 @export var bullet_scene: PackedScene
+@onready var laser_sound: AudioStreamPlayer3D = $LaserSound
+
+var target_x = 0.0
+var initial_traget_x = 0.0
 func _ready() -> void:
+	target_x = aim_sphere.position.x
+	initial_traget_x = aim_sphere.position.x
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
@@ -24,16 +30,22 @@ func _input(event):
 			crosshair.visible = !crosshair.visible
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			print("Mouse wheel up")
-			aim_sphere.position.x += 0.05
-			crosshair.position.x += 0.05
+			#aim_sphere.position.x += 0.05
+			crosshair.position.x += 0.08
+			target_x += 0.05
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			print("Mouse wheel down")
-			aim_sphere.position.x -= 0.05
-			crosshair.position.x +=0.05
+			#aim_sphere.position.x -= 0.05
+			target_x -= 0.08
+			target_x = max(initial_traget_x/2, target_x)
+			crosshair.position.x -=0.05
 
 	if event is InputEventMouseMotion:
 		rotate_y(event.relative.x * mouse_sensitivity)
 		camera_holder.rotate_y(-event.relative.x * mouse_sensitivity)
+
+func _process(delta: float) -> void:
+	aim_sphere.position.x = lerp(aim_sphere.position.x, target_x, 8 * delta)
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -46,6 +58,7 @@ func _physics_process(delta: float) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	if Input.is_action_just_released("shoot"):
+		laser_sound.play()
 		shoot_bullet()
 	
 	var input_dir := Input.get_vector("up", "down", "right", "left")
