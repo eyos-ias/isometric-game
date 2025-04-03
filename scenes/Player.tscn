@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://n6udya4gynkm"]
+[gd_scene load_steps=15 format=3 uid="uid://n6udya4gynkm"]
 
 [ext_resource type="Script" uid="uid://w32stij6mr73" path="res://scripts/player.gd" id="1_bruh7"]
 [ext_resource type="Script" uid="uid://b4qb4dcglkyh0" path="res://state/player/state_machine.gd" id="2_v6fml"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dmwhnimiyapgp" path="res://state/player/fall_state.gd" id="5_bruh7"]
 [ext_resource type="Script" uid="uid://c0ywtf4s2m826" path="res://state/player/run_state.gd" id="6_6eyey"]
 [ext_resource type="Script" uid="uid://b2u6rgpmux7ju" path="res://state/player/shoot_state.gd" id="7_d3wef"]
+[ext_resource type="PackedScene" uid="uid://2h4f5amr3re0" path="res://scenes/bullet.tscn" id="9_bruh7"]
 [ext_resource type="AudioStream" uid="uid://bol34xb8iphhs" path="res://assets/audio/light_blast_5.wav" id="10_6eyey"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_olpmc"]
@@ -20,6 +21,7 @@
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_bruh7")
+bullet_scene = ExtResource("9_bruh7")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
