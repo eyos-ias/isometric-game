@@ -92,7 +92,6 @@ world = NodePath("..")
 
 [node name="Enemy3" parent="." instance=ExtResource("6_4ag8t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0618, 0.731684, -21.4219)
-player_path = NodePath("../Player")
 
 [node name="TestEnemy" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0086, 1.04582, 0)

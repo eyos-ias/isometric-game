@@ -17,7 +17,7 @@ func update_state(delta):
 	if player and enemy.global_position.distance_to(player.global_position) < detection_radius:
 		enemy.look_at(Vector3(player.global_position.x, player.global_position.y, player.global_position.z), Vector3.UP)
 		print("should chase")
-		# get_parent().set_state("Chasing")
+		get_parent().set_state("Chase")
 
 func exit_state():
 	print("Exiting Idle State")
