@@ -3,6 +3,7 @@ extends Node
 @export var initial_state: String
 @export var current_state: Node = null
 var player
+@onready var state_label: Label3D = $"../Label3D"
 
 func _ready() -> void:
 	player = get_parent().get_parent().get_node("Player")
@@ -17,6 +18,7 @@ func set_state(state_name: String):
 	if current_state:
 		current_state.exit_state()
 	current_state = get_node(state_name)
+	state_label.text = state_name
 	current_state.enter_state()
 
 func update_state(delta: float):

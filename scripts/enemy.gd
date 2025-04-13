@@ -1,4 +1,16 @@
 extends CharacterBody3D
+var health = 4
+@onready var hit_box: Area3D = %HitBox
+@onready var state_machine: Node = $StateMachine
+
+func _ready() -> void:
+	pass
+	#hit_box.area_entered.connect(got_shot)
+
+
+func got_shot():
+	state_machine.set_state("Hurt")
+	print("i got shot mate")
 #@onready var state_machine: Node = $StateMachine
 #var player: CharacterBody3D = null
 #const SPEED = 5.0
@@ -24,3 +36,7 @@ extends CharacterBody3D
 
  #func _physics_process(delta: float) -> void:
  	#pass
+
+
+func _on_hit_box_area_entered(area: Area3D) -> void:
+	got_shot()

@@ -13,6 +13,7 @@ func enter_state():
 func update_state(delta):
 	# print("Player: ", player)
 	if player:
+		#pass
 		print("Distance to player: ", enemy.global_position.distance_to(player.global_position))
 	if player and enemy.global_position.distance_to(player.global_position) < detection_radius:
 		enemy.look_at(Vector3(player.global_position.x, player.global_position.y, player.global_position.z), Vector3.UP)

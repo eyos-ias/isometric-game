@@ -15,6 +15,8 @@ extends CharacterBody3D
 @export var bullet_scene: PackedScene
 @onready var laser_sound: AudioStreamPlayer3D = $LaserSound
 
+@onready var animation_player: AnimationPlayer = $visuals/AnimationPlayer
+
 var target_x = 0.0
 var initial_traget_x = 0.0
 func _ready() -> void:
@@ -37,8 +39,8 @@ func _input(event):
 			print("Mouse wheel down")
 			#aim_sphere.position.x -= 0.05
 			target_x -= 0.08
-			target_x = max(initial_traget_x/2, target_x)
-			crosshair.position.x -=0.05
+			target_x = max(initial_traget_x / 2, target_x)
+			crosshair.position.x -= 0.05
 
 	if event is InputEventMouseMotion:
 		rotate_y(event.relative.x * mouse_sensitivity)

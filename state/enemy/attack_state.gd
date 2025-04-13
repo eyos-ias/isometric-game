@@ -8,7 +8,7 @@ var player
 
 
 func enter_state():
-	animation_player.animation_finished.connect(_on_animation_finished)
+	#animation_player.animation_finished.connect(_on_animation_finished)
 	player = get_parent().player
 	animation_player.play("attack")
 	print("entering attack state")
