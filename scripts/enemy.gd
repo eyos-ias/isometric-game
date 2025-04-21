@@ -39,4 +39,5 @@ func got_shot():
 
 
 func _on_hit_box_area_entered(area: Area3D) -> void:
-	got_shot()
+	if area.is_in_group("bullet"):
+		got_shot()

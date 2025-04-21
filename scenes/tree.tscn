@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://di1pg1ijheihm"]
+
+[ext_resource type="ArrayMesh" uid="uid://b82b277a4qn6x" path="res://assets/models/trees/111-1-tree2-green.obj" id="1_lvwx8"]
+[ext_resource type="Script" uid="uid://ced5ucms0dcw8" path="res://scripts/trees.gd" id="1_ysiov"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ysiov"]
+height = 3.01602
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vplca"]
+size = Vector3(1.11914, 2.9209, 1.03613)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vplca"]
+viewport_path = NodePath("Sprite3D/SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vplca"]
+bg_color = Color(0.873298, 0.873298, 0.873298, 1)
+border_color = Color(0.423651, 0.423651, 0.42365, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_viusy"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="Tree" type="Node3D"]
+script = ExtResource("1_ysiov")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="111-1-tree2-green" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, 0, 0, 0)
+mesh = ExtResource("1_lvwx8")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54026, 0)
+shape = SubResource("CapsuleShape3D_ysiov")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46204, 0)
+shape = SubResource("BoxShape3D_vplca")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0822067, 4.2608, -0.0627346)
+billboard = 1
+texture = SubResource("ViewportTexture_vplca")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D"]
+disable_3d = true
+transparent_bg = true
+size_2d_override = Vector2i(-135, 470)
+
+[node name="HealthBar" type="ProgressBar" parent="Sprite3D/SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 82.0
+offset_top = 55.0
+offset_right = 558.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_vplca")
+theme_override_styles/fill = SubResource("StyleBoxFlat_viusy")
+value = 53.0
+show_percentage = false
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

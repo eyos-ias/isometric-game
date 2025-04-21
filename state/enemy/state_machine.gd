@@ -3,7 +3,7 @@ extends Node
 @export var initial_state: String
 @export var current_state: Node = null
 var player
-@onready var state_label: Label3D = $"../Label3D"
+@onready var state_label: Label3D = $"../StateLabel/Label3D"
 
 func _ready() -> void:
 	player = get_parent().get_parent().get_node("Player")

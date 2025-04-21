@@ -1694,7 +1694,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.928783, 0)
 shape = SubResource("CapsuleShape3D_nenq2")
 debug_color = Color(0.922794, 5.2655e-05, 0.686192, 0.42)
 
-[node name="Label3D" type="Label3D" parent="."]
+[node name="StateLabel" type="Sprite3D" parent="."]
+billboard = 1
+
+[node name="Label3D" type="Label3D" parent="StateLabel"]
 transform = Transform3D(-1, 0, -8.74228e-08, -8.5309e-08, 0.218569, 0.975821, 1.91079e-08, 0.975821, -0.218569, 0, 3.51881, 0)
 pixel_size = 0.02
 text = "idle"

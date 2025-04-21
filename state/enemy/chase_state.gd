@@ -14,7 +14,7 @@ func enter_state():
 
 func update_state(delta):
 	if player and enemy.global_position.distance_to(player.global_position) < 15:
-		print("Distance to player: ", enemy.global_position.distance_to(player.global_position))
+		# print("Distance to player: ", enemy.global_position.distance_to(player.global_position))
 		enemy.velocity = Vector3.ZERO
 		nav_agent.set_target_position(player.global_position)
 		var next_nav_point = nav_agent.get_next_path_position()
