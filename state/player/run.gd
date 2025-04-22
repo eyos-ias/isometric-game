@@ -10,6 +10,8 @@ func enter_state():
 
 func update_state(delta: float):
 	# Get input direction
+	if player.animation_player.current_animation != "running":
+		player.animation_player.play("running")
 	var input_dir := Input.get_vector("up", "down", "right", "left")
 	
 	if not player.is_on_floor():

@@ -9,14 +9,13 @@ func enter_state():
 	#animation_player.animation_finished.connect(_on_animation_finished)
 	player = get_parent().player
 	animation_player.play("hurt")
-	print("Enemy is hurt")
 
 func update_state(delta):
 	pass
 	#print("hurt state updating")
 
 func exit_state():
-	print("Exiting Idle State")
+	pass
 
 func _on_animation_finished():
 	get_parent().set_state("Idle")

@@ -7,9 +7,13 @@ func enter_state():
 	
 	player = get_parent().player
 	print("player: ", player)
+	player.velocity.x = 0
+	player.velocity.z = 0
 	player.animation_player.play("idle")
 
 func update_state(delta: float) -> void:
+	if player.animation_player.current_animation != "idle":
+		player.animation_player.play("idle")
 	player.velocity.x = 0
 	player.velocity.z = 0
 	if not player.is_on_floor():
