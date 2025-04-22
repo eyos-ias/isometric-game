@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 @export var SPEED = 5.0
 @export var JUMP_VELOCITY = 4.5
 
@@ -128,17 +128,3 @@ func shoot_bullet():
 		world.add_child(bullet_instance)
 	else:
 		print("can't shoot")
-
-# func shoot_bullet():
-# 	if bullet_scene and canShoot:
-# 		# print("this is shooting")
-# 		shooting_sfx.play()
-# 		var bullet_instance = bullet_scene.instantiate()
-# 		bullet_instance.global_transform = bulletSpawner.global_transform
-# 		get_parent().add_child(bullet_instance)
-# 		# add_child(bullet_instance)
-# 		canShoot = false
-		
-# 		gun.get_node("AnimationPlayer").play("shoot")
-		
-# 		shootTimer.start()

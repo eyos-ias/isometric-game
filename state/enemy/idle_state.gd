@@ -4,17 +4,14 @@ extends Node
 @export var detection_radius: float = 1.0
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
-var player
+var player: Player
 func enter_state():
 	player = get_parent().player
-	animation_player.play("idle")
+	player.animation_player.play("idle")
 	print("Enemy is idle")
 
-func update_state(delta):
+func update_state(delta: float):
 	# print("Player: ", player)
-	if player:
-		#pass
-		print("Distance to player: ", enemy.global_position.distance_to(player.global_position))
 	if player and enemy.global_position.distance_to(player.global_position) < detection_radius:
 		enemy.look_at(Vector3(player.global_position.x, player.global_position.y, player.global_position.z), Vector3.UP)
 		print("should chase")
