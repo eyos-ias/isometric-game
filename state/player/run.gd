@@ -32,6 +32,4 @@ func exit_state():
 	print("exiting run state")
 
 func handle_input(event: InputEvent):
-	if event:
-		pass
-	print("handling input desu")
+	pass

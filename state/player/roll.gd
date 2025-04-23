@@ -12,7 +12,7 @@ func enter_state():
 	player.velocity.z = 0
 
 func update_state(delta: float):
-	pass
+	player.move_and_slide()
 
 func exit_state():
 	print("exiting roll state")
@@ -35,7 +35,7 @@ func start_movement():
 	start_rolling = true
 	print("starting roll")
 
-	# player.velocity.y = player.JUMP_VELOCITY * 1.6
+	player.velocity.y = player.JUMP_VELOCITY * 1.4
 
 	var forward_dir = Vector3(
 		sin(player.visuals.global_rotation.y),

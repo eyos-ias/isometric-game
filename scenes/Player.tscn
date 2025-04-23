@@ -116,6 +116,18 @@ bind/24/pose = Transform3D(-82.3852, -19.4769, -53.2283, -53.8184, -2.57715, 84.
 
 [sub_resource type="Animation" id="Animation_khinc"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.15599, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_mksyk"]
 resource_name = "hurt"
@@ -1905,7 +1917,7 @@ bullet_scene = ExtResource("9_bruh7")
 metadata/_edit_group_ = true
 
 [node name="visuals" type="Node3D" parent="."]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.990771, 0)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -1.15599, 0)
 
 [node name="Armature" type="Node3D" parent="visuals"]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
@@ -2093,6 +2105,7 @@ mesh = SubResource("ArrayMesh_4237a")
 skin = SubResource("Skin_1w0ga")
 
 [node name="ar3na-red2" type="MeshInstance3D" parent="visuals/Armature/Skeleton3D"]
+visible = false
 lod_bias = 30.0
 mesh = SubResource("ArrayMesh_4237a")
 skin = SubResource("Skin_1w0ga")
