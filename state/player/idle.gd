@@ -18,6 +18,8 @@ func update_state(delta: float) -> void:
 		player.animation_player.play("idle")
 	player.velocity.x = 0
 	player.velocity.z = 0
+	
+	player.move_and_slide()
 
 	var input_dir := Input.get_vector("up", "down", "right", "left")
 	if input_dir != Vector2.ZERO:

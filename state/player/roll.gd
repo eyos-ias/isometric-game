@@ -35,13 +35,14 @@ func start_movement():
 	start_rolling = true
 	print("starting roll")
 
-	player.velocity.y = player.JUMP_VELOCITY * 1.4
+	player.velocity.y = player.JUMP_VELOCITY * 1.2
 
 	var forward_dir = Vector3(
 		sin(player.visuals.global_rotation.y),
 		0,
 		cos(player.visuals.global_rotation.y)
 	).normalized()
+	print("forward_dir: ", forward_dir)
 	player.animation_player.set_blend_time("rolling", "idle", 0.25)
 	# Apply velocity in that direction
 	player.velocity.x = forward_dir.x * player.SPEED * 1.3
