@@ -14,6 +14,8 @@ class_name Player
 @onready var visuals: Node3D = $visuals
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var state_machine = $StateMachine
+@onready var debugging: Sprite3D = $Debugging
+
 
 var target_x = 0.0
 var initial_target_x = 0.0
@@ -49,6 +51,8 @@ func _process(delta: float) -> void:
 	update_visuals_position()
 
 func _physics_process(delta: float) -> void:
+	debugging.set_rotation(-rotation)
+
 	state_machine.update_state(delta)
 
 	#move_and_slide()
