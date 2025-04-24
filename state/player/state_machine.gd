@@ -8,6 +8,9 @@ extends Node
 @onready var collision_shape_3d: CollisionShape3D = $'../CollisionShape3D'
 @onready var laser_sound: AudioStreamPlayer3D = $'../LaserSound'
 @export var player: Player
+@onready var debugging: Sprite3D = $'../Debugging'
+@onready var label_3d: Label3D = $'../Debugging/Label3D'
+
 
 func init() -> void:
 	player = get_parent()
@@ -21,6 +24,7 @@ func set_state(state_name: String):
 		current_state.exit_state()
 	current_state = get_node(state_name)
 	current_state.enter_state()
+	label_3d.text = state_name
 
 func update_state(delta: float):
 	if current_state:

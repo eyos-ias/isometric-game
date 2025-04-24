@@ -2168,4 +2168,22 @@ stream = ExtResource("10_6eyey")
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.916077, -0.00857866)
 
+[node name="Debugging" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.791629, 0.611002, 0, -0.611002, 0.791629, 0, 1.70591, 0)
+billboard = 1
+
+[node name="Label3D" type="Label3D" parent="Debugging"]
+text = "State"
+font_size = 107
+
+[node name="Rolling" type="Label3D" parent="Debugging"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0.674147, 0.520326)
+text = "rolling"
+font_size = 127
+
+[node name="RollTimer" type="Timer" parent="."]
+wait_time = 1.688
+one_shot = true
+
 [connection signal="animation_finished" from="visuals/AnimationPlayer" to="StateMachine/Roll" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="RollTimer" to="StateMachine/Roll" method="_on_roll_timer_timeout"]

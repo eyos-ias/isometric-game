@@ -2,6 +2,8 @@ extends Node
 
 var player: Player
 var start_rolling: bool = false
+@onready var rolling: Label3D = $'../../Debugging/Rolling'
+@onready var roll_timer: Timer = $'../../RollTimer'
 
 func enter_state():
 	print("entering roll state")
@@ -10,6 +12,7 @@ func enter_state():
 	player.animation_player.play("rolling")
 	player.velocity.x = 0
 	player.velocity.z = 0
+	roll_timer.start()
 
 func update_state(delta: float):
 	player.move_and_slide()
@@ -33,6 +36,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 
 func start_movement():
 	start_rolling = true
+	rolling.visible = true
 	print("starting roll")
 
 	player.velocity.y = player.JUMP_VELOCITY * 1.2
@@ -52,8 +56,13 @@ func start_movement():
 func end_movement():
 	start_rolling = false
 	print("ending roll")
-	
+	rolling.visible = false
 	# Stop the rolling movement
 	player.velocity.x = 0
 	player.velocity.z = 0
+	get_parent().set_state("Idle")
+
+
+func _on_roll_timer_timeout() -> void:
+	print("roll timer timeout")
 	get_parent().set_state("Idle")
