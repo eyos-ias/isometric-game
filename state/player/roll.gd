@@ -27,12 +27,12 @@ func handle_input(event: InputEvent):
 		pass
 
 func on_animation_finished():
-	get_parent().set_state("Idle")
+	get_parent().set_state("Run")
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "rolling":
-		get_parent().set_state("Idle")
+		get_parent().set_state("Run")
 
 func start_movement():
 	start_rolling = true
@@ -60,9 +60,9 @@ func end_movement():
 	# Stop the rolling movement
 	player.velocity.x = 0
 	player.velocity.z = 0
-	get_parent().set_state("Idle")
+	get_parent().set_state("Run")
 
 
 func _on_roll_timer_timeout() -> void:
 	print("roll timer timeout")
-	get_parent().set_state("Idle")
+	get_parent().set_state("Run")

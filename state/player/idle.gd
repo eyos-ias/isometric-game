@@ -14,8 +14,8 @@ func enter_state():
 func update_state(delta: float) -> void:
 	if not player.is_on_floor():
 		player.velocity.y = move_toward(player.velocity.y, -10, 20 * delta)
-	if player.animation_player.current_animation != "idle":
-		player.animation_player.play("idle")
+	# if player.animation_player.current_animation != "idle":
+	# 	player.animation_player.play("idle")
 	player.velocity.x = 0
 	player.velocity.z = 0
 	
