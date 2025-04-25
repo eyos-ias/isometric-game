@@ -24,6 +24,9 @@ func update_state(delta: float):
 	if Input.is_action_just_released("ui_accept"):
 		get_parent().set_state("Roll")
 		return
+	if Input.is_action_just_pressed("slide"):
+		get_parent().set_state("Slide")
+		return
 	
 	player.handle_movement(input_dir, delta)
 

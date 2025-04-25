@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://n6udya4gynkm"]
+[gd_scene load_steps=30 format=4 uid="uid://n6udya4gynkm"]
 
 [ext_resource type="Script" uid="uid://w32stij6mr73" path="res://scripts/player.gd" id="1_bruh7"]
 [ext_resource type="Script" uid="uid://b4qb4dcglkyh0" path="res://state/player/state_machine.gd" id="2_v6fml"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bwd2y5yc11w08" path="res://state/player/idle.gd" id="4_70d11"]
 [ext_resource type="Script" uid="uid://wjtj767jikvt" path="res://state/player/run.gd" id="5_cw2d6"]
 [ext_resource type="Script" uid="uid://j5fd16t5jtj7" path="res://state/player/roll.gd" id="6_khinc"]
+[ext_resource type="Script" uid="uid://cwulvktv1jrxr" path="res://state/player/slide.gd" id="7_bruh7"]
 [ext_resource type="PackedScene" uid="uid://2h4f5amr3re0" path="res://scenes/bullet.tscn" id="9_bruh7"]
 [ext_resource type="AudioStream" uid="uid://bol34xb8iphhs" path="res://assets/audio/light_blast_5.wav" id="10_6eyey"]
 
@@ -3425,6 +3426,7 @@ script = ExtResource("5_cw2d6")
 script = ExtResource("6_khinc")
 
 [node name="Slide" type="Node" parent="StateMachine"]
+script = ExtResource("7_bruh7")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(-1.86754, 0, 2.34782, 0, 3, 0, -2.34782, 0, -1.86754, 0, 0.0549444, 0)
