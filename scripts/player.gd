@@ -74,7 +74,12 @@ func _physics_process(delta: float) -> void:
 func shoot_bullet():
 	if world:
 		print("can shoot")
+
 		var bullet_instance = bullet_scene.instantiate()
+		if !bullet_instance.enabled:
+			bullet_instance.queue_free()
+			print("bullet not enabled")
+			return
 		bullet_instance.global_transform = raycast.global_transform
 		
 		world.add_child(bullet_instance)

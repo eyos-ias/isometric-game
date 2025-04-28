@@ -1,9 +1,10 @@
 extends Node3D
-
+class_name Bullet
 @export var SPEED = 40.0
 
 @onready var mesh = $MeshInstance3D
 @onready var ray = $RayCast3D
+@export var enabled: bool = false
 
 #signal give_stat(stat_type: int)
 #signal enemy_hit(enemy)
