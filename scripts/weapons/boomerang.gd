@@ -6,6 +6,10 @@ extends Node3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var fire: bool = false
 @onready var return_to_player: bool = false
+
+@export var parent: Node3D
+
+
 func _ready() -> void:
 	pass
 
