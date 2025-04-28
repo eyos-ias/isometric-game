@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://lfw1bgkfca7t"]
 
-[ext_resource type="Texture2D" uid="uid://c3f2a4lux8tgp" path="res://assets/new_weapons/ball/boomerang_weapons-1-boomerang.png" id="1_jr6o4"]
+[ext_resource type="Texture2D" uid="uid://c3f2a4lux8tgp" path="res://assets/new_weapons/boomerang_weapons-1-boomerang.png" id="1_jr6o4"]
 [ext_resource type="Script" uid="uid://bo5npt2xcga8h" path="res://scripts/weapons/boomerang.gd" id="1_ostrr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymup8"]

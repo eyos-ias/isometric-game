@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl2bde3vhx2a6"
-path.s3tc="res://.godot/imported/sword_weapons-7.png-84240b4dc8306d59ef7f026696ffce53.s3tc.ctex"
+path.s3tc="res://.godot/imported/sword_weapons-7.png-d8e9786b08c1a5775fa6dff70975c700.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/sword_weapons-7.png"
-dest_files=["res://.godot/imported/sword_weapons-7.png-84240b4dc8306d59ef7f026696ffce53.s3tc.ctex"]
+source_file="res://assets/new_weapons/sword_weapons-7.png"
+dest_files=["res://.godot/imported/sword_weapons-7.png-d8e9786b08c1a5775fa6dff70975c700.s3tc.ctex"]
 
 [params]
 

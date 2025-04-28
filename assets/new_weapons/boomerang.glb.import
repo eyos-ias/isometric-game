@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bri4altwdc3cr"
-path="res://.godot/imported/sword.glb-744c6939b465f935369d2a81692f7cbc.scn"
+uid="uid://csbyf4isisdst"
+path="res://.godot/imported/boomerang.glb-d16ade72c27ddb5213183d645171fc0d.scn"
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/sword.glb"
-dest_files=["res://.godot/imported/sword.glb-744c6939b465f935369d2a81692f7cbc.scn"]
+source_file="res://assets/new_weapons/boomerang.glb"
+dest_files=["res://.godot/imported/boomerang.glb-d16ade72c27ddb5213183d645171fc0d.scn"]
 
 [params]
 

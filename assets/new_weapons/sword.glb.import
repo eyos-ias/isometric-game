@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bjlns5itah4bo"
-path="res://.godot/imported/hammer.glb-3b1c4124528d347bc63213ea4795d23c.scn"
+uid="uid://bri4altwdc3cr"
+path="res://.godot/imported/sword.glb-b8dfbf8da48c7ad845a1ca4f0de60206.scn"
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/hammer.glb"
-dest_files=["res://.godot/imported/hammer.glb-3b1c4124528d347bc63213ea4795d23c.scn"]
+source_file="res://assets/new_weapons/sword.glb"
+dest_files=["res://.godot/imported/sword.glb-b8dfbf8da48c7ad845a1ca4f0de60206.scn"]
 
 [params]
 

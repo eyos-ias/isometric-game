@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c38q1xsaxedcy"
-path.s3tc="res://.godot/imported/bomb_weapons-9-bomb.png-8aa196b61abed8975ac8d880c1b3f359.s3tc.ctex"
+uid="uid://by2jxb0yqhu6m"
+path.s3tc="res://.godot/imported/disc_weapons-6-disc.png-8ba252b1692a2603f15c117ca9cc9515.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/bomb_weapons-9-bomb.png"
-dest_files=["res://.godot/imported/bomb_weapons-9-bomb.png-8aa196b61abed8975ac8d880c1b3f359.s3tc.ctex"]
+source_file="res://assets/new_weapons/disc_weapons-6-disc.png"
+dest_files=["res://.godot/imported/disc_weapons-6-disc.png-8ba252b1692a2603f15c117ca9cc9515.s3tc.ctex"]
 
 [params]
 

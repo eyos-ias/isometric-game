@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dausrjx5hw5f8"
-path="res://.godot/imported/disc.glb-57d12645db4c9d93eaa763d0fec5af16.scn"
+uid="uid://dxcamdssagcb8"
+path="res://.godot/imported/hammer_two.glb-a3294f781658ee2c71c6dfe9f2109d22.scn"
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/disc.glb"
-dest_files=["res://.godot/imported/disc.glb-57d12645db4c9d93eaa763d0fec5af16.scn"]
+source_file="res://assets/new_weapons/hammer_two.glb"
+dest_files=["res://.godot/imported/hammer_two.glb-a3294f781658ee2c71c6dfe9f2109d22.scn"]
 
 [params]
 

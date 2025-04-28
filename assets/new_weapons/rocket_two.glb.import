@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cwepg7p10qgsi"
-path="res://.godot/imported/rocket_two.glb-4cdd29319a0d07111d7cc7887bfa36c5.scn"
+path="res://.godot/imported/rocket_two.glb-7d9683223310f810217ce816f88f214f.scn"
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/rocket_two.glb"
-dest_files=["res://.godot/imported/rocket_two.glb-4cdd29319a0d07111d7cc7887bfa36c5.scn"]
+source_file="res://assets/new_weapons/rocket_two.glb"
+dest_files=["res://.godot/imported/rocket_two.glb-7d9683223310f810217ce816f88f214f.scn"]
 
 [params]
 

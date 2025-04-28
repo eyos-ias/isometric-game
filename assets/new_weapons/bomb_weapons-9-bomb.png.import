@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3f2a4lux8tgp"
-path.s3tc="res://.godot/imported/boomerang_weapons-1-boomerang.png-2e2868183781ea7d6a429f959587c568.s3tc.ctex"
+uid="uid://c38q1xsaxedcy"
+path.s3tc="res://.godot/imported/bomb_weapons-9-bomb.png-30bd962ad381e0bea2fc9ece73ffbb7f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/boomerang_weapons-1-boomerang.png"
-dest_files=["res://.godot/imported/boomerang_weapons-1-boomerang.png-2e2868183781ea7d6a429f959587c568.s3tc.ctex"]
+source_file="res://assets/new_weapons/bomb_weapons-9-bomb.png"
+dest_files=["res://.godot/imported/bomb_weapons-9-bomb.png-30bd962ad381e0bea2fc9ece73ffbb7f.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doil818mbx1hg"
-path.s3tc="res://.godot/imported/hammer_two_weapons-11-hammer2.png-ba5376d23215e6284cdb39188ee80fd8.s3tc.ctex"
+uid="uid://c3f2a4lux8tgp"
+path.s3tc="res://.godot/imported/boomerang_weapons-1-boomerang.png-03b8f6aa99f2f7425b5eecaf3e5e4d93.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/hammer_two_weapons-11-hammer2.png"
-dest_files=["res://.godot/imported/hammer_two_weapons-11-hammer2.png-ba5376d23215e6284cdb39188ee80fd8.s3tc.ctex"]
+source_file="res://assets/new_weapons/boomerang_weapons-1-boomerang.png"
+dest_files=["res://.godot/imported/boomerang_weapons-1-boomerang.png-03b8f6aa99f2f7425b5eecaf3e5e4d93.s3tc.ctex"]
 
 [params]
 

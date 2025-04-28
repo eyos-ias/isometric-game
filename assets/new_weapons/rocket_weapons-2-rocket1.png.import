@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqcidu3puw6qe"
-path.s3tc="res://.godot/imported/ball_weapons-0-ball.png-9ac3bdbe5690ff8b169b3eb2de015a0e.s3tc.ctex"
+uid="uid://dghjunnhjnvyh"
+path.s3tc="res://.godot/imported/rocket_weapons-2-rocket1.png-76838f3e72281c2237db78a5848dd52c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/ball_weapons-0-ball.png"
-dest_files=["res://.godot/imported/ball_weapons-0-ball.png-9ac3bdbe5690ff8b169b3eb2de015a0e.s3tc.ctex"]
+source_file="res://assets/new_weapons/rocket_weapons-2-rocket1.png"
+dest_files=["res://.godot/imported/rocket_weapons-2-rocket1.png-76838f3e72281c2237db78a5848dd52c.s3tc.ctex"]
 
 [params]
 

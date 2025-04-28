@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dcxcg6g4l73n5"
-path="res://.godot/imported/bow.glb-856ff246a0fdd3c2f3808785f0983a61.scn"
+path="res://.godot/imported/bow.glb-1e664abd57e924a410fbb5d425b276cc.scn"
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/bow.glb"
-dest_files=["res://.godot/imported/bow.glb-856ff246a0fdd3c2f3808785f0983a61.scn"]
+source_file="res://assets/new_weapons/bow.glb"
+dest_files=["res://.godot/imported/bow.glb-1e664abd57e924a410fbb5d425b276cc.scn"]
 
 [params]
 

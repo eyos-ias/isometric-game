@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgu85e7hsl6je"
-path.s3tc="res://.godot/imported/hammer_weapons-3-hammer1.png-5e1e97a49ea6a95b6ee69f68874b113f.s3tc.ctex"
+uid="uid://cqcidu3puw6qe"
+path.s3tc="res://.godot/imported/ball_weapons-0-ball.png-8a115a57c2919c2ae9a64eec199e7ff8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/hammer_weapons-3-hammer1.png"
-dest_files=["res://.godot/imported/hammer_weapons-3-hammer1.png-5e1e97a49ea6a95b6ee69f68874b113f.s3tc.ctex"]
+source_file="res://assets/new_weapons/ball_weapons-0-ball.png"
+dest_files=["res://.godot/imported/ball_weapons-0-ball.png-8a115a57c2919c2ae9a64eec199e7ff8.s3tc.ctex"]
 
 [params]
 

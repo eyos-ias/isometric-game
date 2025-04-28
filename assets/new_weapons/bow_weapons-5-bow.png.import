@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cllceygb320md"
-path.s3tc="res://.godot/imported/arrow_weapons-4-arrow.png-9a491c675a7fef3c7ebb8115d1bcbf60.s3tc.ctex"
+uid="uid://5bsewmjxkjqc"
+path.s3tc="res://.godot/imported/bow_weapons-5-bow.png-a00797bd42eb63640f2161b8512e28c7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/arrow_weapons-4-arrow.png"
-dest_files=["res://.godot/imported/arrow_weapons-4-arrow.png-9a491c675a7fef3c7ebb8115d1bcbf60.s3tc.ctex"]
+source_file="res://assets/new_weapons/bow_weapons-5-bow.png"
+dest_files=["res://.godot/imported/bow_weapons-5-bow.png-a00797bd42eb63640f2161b8512e28c7.s3tc.ctex"]
 
 [params]
 

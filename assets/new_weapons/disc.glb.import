@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://s2myxypdskwx"
-path="res://.godot/imported/bomb.glb-0be3e802e0a612a876444f7b6e7df33f.scn"
+uid="uid://dausrjx5hw5f8"
+path="res://.godot/imported/disc.glb-a7c3c86c3da8191c8a6d7294df98dccd.scn"
 
 [deps]
 
-source_file="res://assets/new_weapons/ball/bomb.glb"
-dest_files=["res://.godot/imported/bomb.glb-0be3e802e0a612a876444f7b6e7df33f.scn"]
+source_file="res://assets/new_weapons/disc.glb"
+dest_files=["res://.godot/imported/disc.glb-a7c3c86c3da8191c8a6d7294df98dccd.scn"]
 
 [params]
 
