@@ -23,7 +23,10 @@ var initial_target_x = 0.0
 func _ready() -> void:
 	target_x = aim_sphere.position.x
 	initial_target_x = aim_sphere.position.x
+
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if OS.is_debug_build():
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	visuals.top_level = true
 	update_visuals_position()
 	
@@ -66,15 +69,17 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
+	if Input.is_action_just_released("recall"):
+		pass
+
 	if Input.is_action_just_released("shoot"):
-		laser_sound.play()
 		shoot_bullet()
 
 
 func shoot_bullet():
 	if world:
 		print("can shoot")
-
+		laser_sound.play()
 		var bullet_instance = bullet_scene.instantiate()
 		if !bullet_instance.enabled:
 			bullet_instance.queue_free()
