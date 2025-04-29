@@ -105,6 +105,7 @@ size = Vector3(0.391602, 0.048584, 0.150635)
 [node name="Boomerang" type="Node3D"]
 script = ExtResource("1_ostrr")
 speed = 5.0
+return_speed = 15.0
 
 [node name="mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.135, 0, 0, 0, 0.135, 5.90104e-09, 0, -5.90104e-09, 0.135, 0, 0, 0)

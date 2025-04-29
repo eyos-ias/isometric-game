@@ -3452,12 +3452,9 @@ texture = ExtResource("3_3li8b")
 [node name="Marker3D" type="Marker3D" parent="RayCast3D"]
 transform = Transform3D(0.108468, 0, -0.9941, 0, 1, 0, 0.9941, 0, 0.108468, 0.715, 0, 2.98023e-08)
 
-[node name="Boomerang" parent="RayCast3D/Marker3D" node_paths=PackedStringArray("original_parent") instance=ExtResource("9_6eyey")]
-transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -2.98023e-08, 0, 0)
-enabled = true
-original_parent = NodePath("../../..")
-
 [node name="Area3D" type="Area3D" parent="RayCast3D/Marker3D"]
+
+[node name="Boomerang" parent="RayCast3D/Marker3D" instance=ExtResource("9_6eyey")]
 
 [node name="LaserSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("10_6eyey")
