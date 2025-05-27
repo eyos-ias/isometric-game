@@ -19,6 +19,7 @@ var initial_throw_pos: Vector3
 var target_pos: Vector3
 var throw_progress: float = 0.0
 var curve_normal: Vector3
+var total_distance: float = 0.0
 
 func _ready() -> void:
 	original_parent = get_parent()
@@ -54,6 +55,7 @@ func start_throw() -> void:
 	var throw_direction = (target_pos - initial_throw_pos).normalized()
 	curve_normal = throw_direction.cross(Vector3.UP) * curve_direction
 	throw_progress = 0.0
+	total_distance = initial_throw_pos.distance_to(target_pos)
 
 func throw_boomerang(_delta):
 	static_collision_shape.disabled = false
@@ -62,7 +64,7 @@ func throw_boomerang(_delta):
 	if animation_player.current_animation != "inverse_rotate":
 		animation_player.play("inverse_rotate")
 	
-	throw_progress += speed * _delta / global_position.distance_to(target_pos)
+	throw_progress += (speed * _delta) / total_distance
 	throw_progress = clamp(throw_progress, 0.0, 1.0)
 	
 	var start_to_target = target_pos - initial_throw_pos

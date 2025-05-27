@@ -25,8 +25,8 @@ func _ready() -> void:
 	initial_target_x = aim_sphere.position.x
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	if OS.is_debug_build():
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	#if OS.is_debug_build():
+		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	visuals.top_level = true
 	update_visuals_position()
 	
